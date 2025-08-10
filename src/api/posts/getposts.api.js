@@ -13,4 +13,3 @@ export async function Getposts() {
   );
   return data;
 }
-git add .
