@@ -1,11 +1,10 @@
 import axios from "axios";
-
+const token = localStorage.getItem("token");
 export async function Getposts() {
-  const token = localStorage.getItem("token"); // هنا جوه الفنكشن
   const { data } = await axios.get(
     "https://linked-posts.routemisr.com/posts?sort=-createdAt",
     {
-      headers: { Authorization: `Bearer ${token}` },
+      headers: { token },
     }
   );
   return data;
