@@ -15,12 +15,13 @@ const [isuser,setuser]=useState(null);
 useEffect(()=>{
     if(localStorage.getItem('token')){
 setlogin(localStorage.getItem('token'))    
+setuser(null)
 getuser()
 }
 
 },[])
  
-return <auth.Provider value={{islogin,setlogin,isuser}}>
+return <auth.Provider value={{islogin,setlogin,isuser,setuser,getuser}}>
     {children}
 </auth.Provider>
 
