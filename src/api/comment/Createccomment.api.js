@@ -1,6 +1,6 @@
 import axios from "axios";
-const token = localStorage.getItem("token");
 export async function createComment({content,post}) {
+  const token = localStorage.getItem("token");
   const { data } = await axios.post(
     "https://linked-posts.routemisr.com/comments",
     {
