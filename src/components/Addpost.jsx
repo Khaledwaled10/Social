@@ -38,7 +38,9 @@ export default function Addpost() {
 
   return (
     <>
+    
       {isPending && <Loading />}
+    
       <form
         onSubmit={handleAddpost}
         className="w-full max-w-2xl mx-auto px-4 sm:px-6 lg:px-8"

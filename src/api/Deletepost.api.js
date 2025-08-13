@@ -1,6 +1,6 @@
 import axios from "axios";
-const token = localStorage.getItem("token");
 export async function deletepost(id) {
+  const token = localStorage.getItem("token");
   const { data } = await axios.delete(
     `https://linked-posts.routemisr.com/posts/${id}`,
     {
